@@ -4,13 +4,13 @@
       <img :src="poster_url + tvShow.poster_path" alt="" class="poster">
       <h1>{{tvShow.original_name}}</h1>
       <p>{{tvShow.overview}}</p>
-      <h3>{{tvShow.number_of_seasons}} seasons</h3>
         <!-- <div v-for="season in tvShow.seasons" :key="season"> -->
           <!-- <b>{{season.name}}:</b> <span class="spacer">       </span>{{season.episode_count}} episodes -->
         <!-- </div> -->
     </div>
 
     <div class="seasons-info">
+            <h3>{{tvShow.number_of_seasons}} seasons</h3>
         <div v-for="season in tvShow.seasons" :key="season">
             <b>{{season.name}}</b>
             <br/>

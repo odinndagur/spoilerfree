@@ -1,20 +1,23 @@
 <template>
   <div>
-<h1>lol</h1>
-  <form action="" @submit.prevent="searchTV">
+  <form action="" @submit.prevent="searchTV" class="search-form">
     <input type="text"
     v-model="tvSearchString"
-    placeholder="Search for a tv show">
-    <input type="button" value="submit">
+    placeholder="Search for a tv show"
+    class="text-input">
+    
+    <input type="button"
+    value="submit"
+    class="button-input">
   </form>
 
   <showCard :tvShow="tvShow" />
 
-  <ul>
+  <!-- <ul>
     <li v-for="(key, value) in tvShow" :key="key + value">
       <b>{{key}} </b> {{value}} <br/>
     </li>
-  </ul>
+  </ul> -->
 
   </div>
 </template>
@@ -58,6 +61,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.search-form{
+  max-width:600px;
+  margin: auto;
+  padding:10px;
+}
+
+.text-input {
+  min-width:15rem;
+  height:2rem;
+}
+
+.button-input {
+  height:2rem;
+  
+}
 /* h3 {
   margin: 40px 0 0;
 }
