@@ -69,14 +69,12 @@ ul {
 }
 
 .seasons-info{
-  padding:1rem;
-  margin-left:2rem;
-  text-align: left;
+  margin:auto;
+  text-align: center;
   font-size: 1.3rem;
 }
 
 .episode-count{
-  margin-left: 1rem;
   font-size:1rem;
 }
 .spacer{
