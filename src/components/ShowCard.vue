@@ -11,21 +11,23 @@
 
     <div class="seasons-info">
             <h3>{{tvShow.number_of_seasons}} seasons</h3>
-        <div v-for="season in tvShow.seasons" :key="season">
-            <b>{{season.name}}</b>
+        <seasonCard v-for="season in tvShow.seasons" :season="season" :key="season">
+            <!-- <b>{{season.name}}</b>
             <br/>
-            <span class="episode-count">{{season.episode_count}} episodes</span>
-        </div>
+            <span class="episode-count">{{season.episode_count}} episodes</span> -->
+        </seasonCard>
     </div>
   </div>
 </template>
 
 <script>
 import moviedb from '../moviedb'
+import SeasonCard from './SeasonCard.vue'
+
 export default {
   name: 'ShowCard',
   components: {
-    
+    SeasonCard,
   },
   props: {
     tvShow: Object,
